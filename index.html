@@ -80,7 +80,7 @@
       <a href="tel:+962786926954">📞 0786926954</a>
       <span>خدمة متاحة 7 أيام في الأسبوع</span>
     </div>
-    <span>تغطية العاصمة عمان وجميع محافظات الأردن</span>
+    <span>عمّان أساس خدمتنا · وباقي المناطق حسب الطلب</span>
   </div>
 </div>
 
@@ -128,8 +128,8 @@
   <div class="container">
     <div class="hero-copy">
       <span class="hero-badge">🛡️ الخبراء المبدعون لأنظمة الأمان والحماية</span>
-      <h1>حماية استباقية لمنزلك ومنشأتك بلمسة <em>خبير</em> في الأردن</h1>
-      <p class="lead">توريد وتركيب كاميرات مراقبة، أنظمة إنذار سرقة وحريق، طفايات، ماتورات أبواب، أكسس كنترول، إنتركم فيديو وبصمة دوام — بفريق فني متخصص وأسعار واضحة.</p>
+      <h1>تركيب كاميرات مراقبة وأنظمة أمن وحماية في <em>عمّان، الأردن</em></h1>
+      <p class="lead">حلول للمنازل والشركات تشمل كاميرات CCTV، إنذار السرقة والحريق، أكسس كنترول، إنتركم فيديو، بصمة الدوام وطفايات الحريق. نساعدك تختار النظام المناسب بعد فهم احتياج موقعك.</p>
       <div class="hero-ctas">
         <a href="tel:+962786926954" class="btn btn-primary">📞 اتصل الآن: 0786926954</a>
         <a href="https://wa.me/962786926954" target="_blank" rel="noopener" class="btn btn-outline">راسلنا واتساب</a>
@@ -146,7 +146,7 @@
       </div>
       <div class="hero-callout">
         <strong>تغطية شاملة</strong>
-        <span>عمّان وجميع محافظات المملكة</span>
+        <span>عمّان وباقي المناطق حسب الطلب</span>
       </div>
     </div>
   </div>
@@ -617,5 +617,28 @@ function handleSubmit(e){
   return false;
 }
 </script>
+
+<!-- Conversion event bridge: connect GA4/Google Tag Manager before relying on reports. -->
+<script>
+(function(){
+  function emitLeadEvent(name, params){
+    var payload=Object.assign({event:name,event_category:'lead'},params||{});
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push(payload);
+    if(typeof window.gtag==='function'){window.gtag('event',name,payload);}
+  }
+  document.addEventListener('click',function(e){
+    var link=e.target.closest('a[href]');
+    if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(href.indexOf('tel:')===0)emitLeadEvent('click_to_call',{link_url:href,page_location:location.href});
+    if(href.indexOf('wa.me/')!==-1||href.indexOf('whatsapp')!==-1)emitLeadEvent('click_whatsapp',{link_url:href,page_location:location.href});
+  });
+  document.addEventListener('click',function(e){
+    if(e.target.closest('#sendQuote'))emitLeadEvent('whatsapp_quote_start',{form_id:'quote_form',page_location:location.href});
+  });
+})();
+</script>
+
 </body>
 </html>
