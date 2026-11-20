@@ -679,13 +679,13 @@ function handleSubmit(e){
   var contract = document.getElementById('fcontract').value;
   var area = document.getElementById('farea').value;
   var msg = document.getElementById('fmsg').value;
-  var text = "طلب عرض سعر جديد من موقع AmanCam\\n" +
-    "الاسم: " + name + "\\n" +
-    "الهاتف: " + phone + "\\n" +
-    "نوع المنشأة: " + organization + "\\n" +
-    "الخدمة: " + service + "\\n" +
-    "نوع الطلب: " + contract + "\\n" +
-    "المنطقة: " + area + "\\n" +
+  var text = "طلب عرض سعر جديد من موقع AmanCam\n" +
+    "الاسم: " + name + "\n" +
+    "الهاتف: " + phone + "\n" +
+    "نوع المنشأة: " + organization + "\n" +
+    "الخدمة: " + service + "\n" +
+    "نوع الطلب: " + contract + "\n" +
+    "المنطقة: " + area + "\n" +
     "تفاصيل: " + msg;
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({event:'generate_lead',event_category:'lead',lead_type:contract,organization_type:organization,service:service});
