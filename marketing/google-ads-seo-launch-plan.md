@@ -116,7 +116,7 @@ Descriptions:
 The website now emits event hooks for:
 - `click_to_call`
 - `click_whatsapp`
-- `whatsapp_quote_start` on the homepage quote action
+- `generate_lead` when the homepage quote form launches the WhatsApp enquiry
 
 These are event hooks only. They do not send data to Google until a valid GA4 / Google Tag Manager measurement setup is installed and tested.
 
@@ -174,3 +174,27 @@ Capture these in the WhatsApp prefill or a short lead form:
 - Preferred site survey / contact time
 
 Do not promise a response SLA, spare parts inclusion, or guaranteed uptime unless it is approved and explicitly written into the quotation or contract.
+
+
+## English B2B landing pages added
+English campaigns can now use dedicated pages rather than the general English homepage:
+- Companies and offices: `/en/sectors/companies-offices.html`
+- Malls and retail: `/en/sectors/malls-retail.html`
+- Restaurants and cafés: `/en/sectors/restaurants-cafes.html`
+- Schools and universities: `/en/sectors/schools-universities.html`
+- Hospitals and clinics: `/en/sectors/hospitals-clinics.html`
+- Factories and warehouses: `/en/sectors/factories-warehouses.html`
+- Hotels and institutions: `/en/sectors/institutions-hotels.html`
+- Maintenance contracts: `/en/sectors/maintenance-contracts.html`
+
+Each English page has an Arabic alternate URL, a sector-specific WhatsApp prefill, and a Service schema description scoped to Amman. Other Jordanian cities remain subject to confirmation.
+
+## B2B campaign rollout sequence
+1. Launch one Arabic Search campaign for CCTV installation and one tightly grouped Arabic campaign for the other high-intent security services, both focused on Amman.
+2. Create a separate Arabic maintenance campaign once the contract landing page and tracking are verified.
+3. Start English Search only if the business can handle English enquiries; use the matching English sector pages.
+4. Add sector-specific campaigns only when Keyword Planner and actual search-term volume justify the extra campaign split.
+5. Use presence-based Amman targeting and review search terms frequently in the initial period.
+
+## Tracking status
+The site contains front-end event hooks for `click_to_call`, `click_whatsapp` and `generate_lead`. The Google Ads, GA4 and Google Search Console connections were not authenticated at the time of this revision. These hooks have not yet been verified as delivered GA4 events or imported Google Ads conversions. No spend should be enabled until the connections and conversion tests are complete.
