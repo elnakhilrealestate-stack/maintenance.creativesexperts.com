@@ -49,8 +49,8 @@
     "addressCountry": "JO"
   },
   "areaServed": {
-    "@type": "Country",
-    "name": "الأردن"
+    "@type": "City",
+    "name": "عمّان"
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -623,9 +623,8 @@ function handleSubmit(e){
 (function(){
   function emitLeadEvent(name, params){
     var payload=Object.assign({event:name,event_category:'lead'},params||{});
-    window.dataLayer=window.dataLayer||[];
-    window.dataLayer.push(payload);
     if(typeof window.gtag==='function'){window.gtag('event',name,payload);}
+    else{window.dataLayer=window.dataLayer||[];window.dataLayer.push(payload);}
   }
   document.addEventListener('click',function(e){
     var link=e.target.closest('a[href]');
