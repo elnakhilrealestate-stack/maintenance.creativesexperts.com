@@ -549,15 +549,38 @@
             </select>
           </div>
           <div>
-            <label for="farea">المنطقة</label>
-            <input id="farea" type="text" placeholder="مثال: خلدا، عمّان">
+            <label for="forganization">نوع المنشأة</label>
+            <select id="forganization">
+              <option>شركة أو مكتب</option>
+              <option>مول أو مركز تجاري</option>
+              <option>مطعم أو كافيه</option>
+              <option>مدرسة أو جامعة</option>
+              <option>مستشفى أو عيادة</option>
+              <option>مصنع أو مخزن</option>
+              <option>فندق أو مؤسسة أخرى</option>
+              <option>منزل أو مبنى سكني</option>
+            </select>
+          </div>
+          <div>
+            <label for="fcontract">نوع الطلب</label>
+            <select id="fcontract">
+              <option>تنفيذ وتركيب نظام جديد</option>
+              <option>صيانة لمرة واحدة</option>
+              <option>عقد صيانة قصير الأجل</option>
+              <option>عقد صيانة طويل الأجل / سنوي</option>
+              <option>تطوير نظام موجود</option>
+            </select>
+          </div>
+          <div>
+            <label for="farea">المنطقة / المدينة</label>
+            <input id="farea" type="text" placeholder="مثال: عمّان، خلدا">
           </div>
           <div class="full">
             <label for="fmsg">تفاصيل إضافية</label>
             <textarea id="fmsg" rows="3" placeholder="طبيعة الموقع، عدد النقاط المطلوب تغطيتها..."></textarea>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">إرسال الطلب عبر واتساب</button>
+        <button type="submit" id="sendQuote" class="btn btn-primary">إرسال الطلب عبر واتساب</button>
       </form>
     </div>
   </div>
@@ -652,14 +675,20 @@ function handleSubmit(e){
   var name = document.getElementById('fname').value;
   var phone = document.getElementById('fphone').value;
   var service = document.getElementById('fservice').value;
+  var organization = document.getElementById('forganization').value;
+  var contract = document.getElementById('fcontract').value;
   var area = document.getElementById('farea').value;
   var msg = document.getElementById('fmsg').value;
-  var text = "طلب عرض سعر جديد\n" +
-    "الاسم: " + name + "\n" +
-    "الهاتف: " + phone + "\n" +
-    "الخدمة: " + service + "\n" +
-    "المنطقة: " + area + "\n" +
+  var text = "طلب عرض سعر جديد من موقع AmanCam\\n" +
+    "الاسم: " + name + "\\n" +
+    "الهاتف: " + phone + "\\n" +
+    "نوع المنشأة: " + organization + "\\n" +
+    "الخدمة: " + service + "\\n" +
+    "نوع الطلب: " + contract + "\\n" +
+    "المنطقة: " + area + "\\n" +
     "تفاصيل: " + msg;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({event:'generate_lead',event_category:'lead',lead_type:contract,organization_type:organization,service:service});
   window.open("https://wa.me/962786926954?text=" + encodeURIComponent(text), "_blank");
   return false;
 }
