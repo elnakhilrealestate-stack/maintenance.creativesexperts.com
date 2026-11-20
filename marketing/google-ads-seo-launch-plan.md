@@ -139,3 +139,38 @@ Before enabling spend:
 - GA4 / GTM and Google Ads conversion actions are verified.
 - Service coverage and opening hours are confirmed.
 - Keyword volumes and CPCs are checked in Keyword Planner.
+
+
+## B2B sector landing pages added
+Each campaign/ad group should use the closest sector page rather than sending every B2B click to the homepage:
+- Companies and offices: `/sectors/security-systems-for-companies.html`
+- Malls and retail: `/sectors/security-systems-for-malls-retail.html`
+- Restaurants and cafés: `/sectors/security-systems-for-restaurants.html`
+- Schools and universities: `/sectors/security-systems-for-schools-universities.html`
+- Hospitals and clinics: `/sectors/security-systems-for-hospitals-clinics.html`
+- Factories and warehouses: `/sectors/security-systems-for-factories-warehouses.html`
+- Hotels and multi-site institutions: `/sectors/security-systems-for-institutions.html`
+- Maintenance contracts: `/contracts/security-system-maintenance-contracts.html`
+
+## Additional B2B campaign structure
+Keep separate campaigns or tightly themed ad groups by service/sector only when there is enough budget and search demand. Suggested initial segmentation:
+1. CCTV installation for businesses — companies, retail, restaurants.
+2. Security systems for educational facilities — schools and universities.
+3. Security systems for healthcare — hospitals and clinics.
+4. Industrial CCTV and access control — factories and warehouses.
+5. Maintenance contracts — CCTV, access control and alarm maintenance.
+6. Multi-site / institutional security — hotels and multi-building organizations.
+
+Do not split a small budget into too many low-volume campaigns on day one. Start with the highest-intent services and locations, collect search-term data, then expand sector-specific campaigns as qualified lead volume supports them.
+
+## B2B lead qualification fields
+Capture these in the WhatsApp prefill or a short lead form:
+- Organization type and activity
+- City / site location
+- Number of buildings, branches and floors
+- Required systems (CCTV, access control, alarm, intercom, attendance)
+- New installation, upgrade, one-off maintenance, or maintenance contract
+- Desired contract duration (short-term / annual / multi-year)
+- Preferred site survey / contact time
+
+Do not promise a response SLA, spare parts inclusion, or guaranteed uptime unless it is approved and explicitly written into the quotation or contract.
