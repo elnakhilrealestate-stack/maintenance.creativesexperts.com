@@ -31,7 +31,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Almarai:wght@400;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Almarai:wght@400;700;800&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="assets/style.css">
 
 <script type="application/ld+json">
@@ -103,7 +104,7 @@
     </nav>
     <div class="nav-cta">
       <a class="lang-switch" href="/en/" lang="en" hreflang="en">EN</a>
-      <a class="nav-phone" href="tel:+962786926954">
+      <a class="nav-phone" href="tel:+962786926954" aria-label="اتصل بالخبراء المبدعين على الرقم 0786926954">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A2A57" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span>0786926954</span>
       </a>
@@ -124,6 +125,8 @@
   </nav>
 </header>
 
+<!-- Main content -->
+<main id="main-content">
 <!-- Hero -->
 <section class="hero" id="home">
   <svg class="wave-deco" viewBox="0 0 200 200"><path fill="#fff" d="M45,-58C58,-49,68,-34,71,-17C75,0,72,20,61,34C51,49,32,58,12,63C-9,68,-30,68,-46,58C-62,48,-74,27,-76,5C-78,-17,-71,-40,-56,-53C-42,-66,-21,-70,-1,-69C19,-68,32,-67,45,-58Z" transform="translate(100 100)"/></svg>
@@ -170,7 +173,7 @@
 <section class="section" id="about">
   <div class="container about-grid">
     <div class="about-media" data-reveal>
-      <img src="assets/camera-installation.jpg" alt="فريق الخبراء المبدعون أثناء تركيب كاميرات المراقبة" loading="lazy">
+      <img src="assets/camera-installation.jpg" alt="فريق الخبراء المبدعون أثناء تركيب كاميرات المراقبة" loading="lazy" decoding="async">
       <div class="tag">خبرة ميدانية موثوقة</div>
     </div>
     <div data-reveal>
@@ -559,6 +562,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- Footer -->
 <footer>
