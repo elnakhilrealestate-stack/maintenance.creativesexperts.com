@@ -688,8 +688,12 @@ function handleSubmit(e){
     "نوع الطلب: " + contract + "\n" +
     "المنطقة: " + area + "\n" +
     "تفاصيل: " + msg;
+  var leadParams = {event_category:'lead',lead_type:contract,organization_type:organization,service:service};
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({event:'generate_lead',event_category:'lead',lead_type:contract,organization_type:organization,service:service});
+  window.dataLayer.push(Object.assign({event:'generate_lead'}, leadParams));
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'generate_lead', leadParams);
+  }
   window.open("https://wa.me/962786926954?text=" + encodeURIComponent(text), "_blank");
   return false;
 }
