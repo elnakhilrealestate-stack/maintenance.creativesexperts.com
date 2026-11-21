@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://security.creativesexperts.com/sitemap.xml
+Sitemap: https://amancam.creativesexperts.com/sitemap.xml
